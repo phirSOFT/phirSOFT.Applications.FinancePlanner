@@ -17,27 +17,27 @@ namespace phirSOFT.Applications.FinancePlanner
     /// <summary>
     /// This type is used to report the progress of an operation to the ProgressManager.
     /// </summary>
-    public struct IProgressReport
+    public struct ProgressReport
     {
 
         /// <summary>
         /// Gets the current state of the progress.
         /// </summary>
-        ProgressStates State { get; }
+        public ProgressStates State { get; }
 
         /// <summary>
         /// Gets the current percentage of the progress. (Between 0 and 1)
         /// </summary>
-        double Progress { get; }
+        public double Progress { get; }
 
         /// <summary>
         /// Gets the title of the operation
         /// </summary>
-        string Title { get; }
+        public string Title { get; }
 
         /// <summary>
         /// Gets the description of the operation.
         /// </summary>
-        string Description { get; }
+        public string Description { get; }
     }
 }

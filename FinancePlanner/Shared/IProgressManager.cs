@@ -27,18 +27,18 @@ namespace phirSOFT.Applications.FinancePlanner
         /// <summary>
         /// Registers a progress.
         /// </summary>
-        /// <param name="progress">The reporting progress interface.</param>
+        /// <returns>An <see cref="IProgress{T}"/> that can be handled to the progress to report ist progress.</returns>
         /// <param name="cancel">The command to cancel the progress</param>
-        void RegisterProgress(IProgress<IProgressReport> progress, ICommand cancel);
+        IProgress<ProgressReport> RegisterProgress(ICommand cancel);
 
         /// <summary>
         /// Registers a progress.
         /// </summary>
-        /// <param name="progress">The reporting progress interface.</param>
         /// <param name="cancel">The command to cancel the progress</param>
         /// <param name="pause">The command to pause the progress.</param>
         /// <param name="resume">The command to resume the progress.</param>
-        void RegisterProgress(IProgress<IProgressReport> progress, ICommand cancel, ICommand pause, ICommand resume);
+        /// <returns>An <see cref="IProgress{T}"/> that can be handled to the progress to report ist progress.</returns>
+        IProgress<ProgressReport> RegisterProgress(ICommand cancel, ICommand pause, ICommand resume);
 
         /// <summary>
         /// Gets all registred progresses. If a progress finished it will be removed.
