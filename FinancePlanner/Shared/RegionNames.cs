@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace phirSOFT.Applications.FinancePlanner
+﻿namespace phirSOFT.Applications.FinancePlanner
 {
-
     /// <summary>
-    /// Contains the names of all known regions
+    ///     Contains the names of all known regions
     /// </summary>
     public static class RegionNames
     {

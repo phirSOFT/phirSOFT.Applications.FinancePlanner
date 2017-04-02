@@ -18,31 +18,30 @@ using System.Windows.Input;
 
 namespace phirSOFT.Applications.FinancePlanner
 {
-
     /// <summary>
-    /// Provides the contract for an ProgressManager
+    ///     Provides the contract for an ProgressManager
     /// </summary>
     public interface IProgressManager
     {
         /// <summary>
-        /// Registers a progress.
+        ///     Gets all registred progresses. If a progress finished it will be removed.
         /// </summary>
-        /// <returns>An <see cref="IProgress{T}"/> that can be handled to the progress to report ist progress.</returns>
+        ReadOnlyObservableCollection<IManagedProgress> Progresses { get; }
+
+        /// <summary>
+        ///     Registers a progress.
+        /// </summary>
+        /// <returns>An <see cref="IProgress{T}" /> that can be handled to the progress to report ist progress.</returns>
         /// <param name="cancel">The command to cancel the progress</param>
         IProgress<ProgressReport> RegisterProgress(ICommand cancel);
 
         /// <summary>
-        /// Registers a progress.
+        ///     Registers a progress.
         /// </summary>
         /// <param name="cancel">The command to cancel the progress</param>
         /// <param name="pause">The command to pause the progress.</param>
         /// <param name="resume">The command to resume the progress.</param>
-        /// <returns>An <see cref="IProgress{T}"/> that can be handled to the progress to report ist progress.</returns>
+        /// <returns>An <see cref="IProgress{T}" /> that can be handled to the progress to report ist progress.</returns>
         IProgress<ProgressReport> RegisterProgress(ICommand cancel, ICommand pause, ICommand resume);
-
-        /// <summary>
-        /// Gets all registred progresses. If a progress finished it will be removed.
-        /// </summary>
-        ReadOnlyObservableCollection<IManagedProgress> Progresses { get; }
     }
 }

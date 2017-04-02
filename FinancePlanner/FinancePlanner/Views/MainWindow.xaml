@@ -9,15 +9,12 @@
     <Grid>
         <fluent:Ribbon>
             <fluent:Ribbon.Menu>
-                <fluent:Backstage prism:RegionManager.RegionName="{x:Static shared:RegionNames.ShellApplicationMenu}">
-                    
-                </fluent:Backstage>
+                <fluent:Backstage prism:RegionManager.RegionName="{x:Static shared:RegionNames.ShellApplicationMenu}" />
             </fluent:Ribbon.Menu>
         </fluent:Ribbon>
         <ContentControl prism:RegionManager.RegionName="ContentRegion" />
 
-        <fluent:StatusBar VerticalAlignment="Bottom" prism:RegionManager.RegionName="{x:Static shared:RegionNames.ShellStatusBar}">
-            
-        </fluent:StatusBar>
+        <fluent:StatusBar VerticalAlignment="Bottom"
+                          prism:RegionManager.RegionName="{x:Static shared:RegionNames.ShellStatusBar}" />
     </Grid>
 </fluent:RibbonWindow>

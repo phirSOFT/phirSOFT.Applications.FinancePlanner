@@ -1,11 +1,11 @@
-﻿using Microsoft.Practices.Unity;
-using Prism.Unity;
+﻿using System.Windows;
 using FinancePlanner.Views;
-using System.Windows;
+using Microsoft.Practices.Unity;
+using Prism.Unity;
 
 namespace FinancePlanner
 {
-    class Bootstrapper : UnityBootstrapper
+    internal class Bootstrapper : UnityBootstrapper
     {
         protected override DependencyObject CreateShell()
         {

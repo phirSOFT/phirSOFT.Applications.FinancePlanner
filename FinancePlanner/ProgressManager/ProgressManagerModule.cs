@@ -1,12 +1,12 @@
-﻿using Prism.Modularity;
+﻿using System;
+using Prism.Modularity;
 using Prism.Regions;
-using System;
 
 namespace ProgressManager
 {
     public class ProgressManagerModule : IModule
     {
-        IRegionManager _regionManager;
+        private IRegionManager _regionManager;
 
         public ProgressManagerModule(IRegionManager regionManager)
         {
