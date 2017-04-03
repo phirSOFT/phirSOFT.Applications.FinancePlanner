@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using phirSOFT.Applications.FinancePlanner;
 
-namespace ProgressManager.Services
+namespace phirSOFT.Applications.FinancePlanner.ProgressManager.Services
 {
     /// <summary>
     ///     Concrete implementation of the <see cref="IProgressManager" /> interface.
@@ -44,4 +44,6 @@ namespace ProgressManager.Services
         /// <inheritdoc />
         public ReadOnlyObservableCollection<IManagedProgress> Progresses { get; }
     }
+
+ 
 }

@@ -6,7 +6,7 @@ using System.Windows.Input;
 using phirSOFT.Applications.FinancePlanner;
 using ProgressManager.Annotations;
 
-namespace ProgressManager.Services
+namespace phirSOFT.Applications.FinancePlanner.ProgressManager.Services
 {
     internal partial class ProgressManager : IProgressManager
     {

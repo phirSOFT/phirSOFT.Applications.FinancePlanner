@@ -2,7 +2,7 @@
 using Prism.Modularity;
 using Prism.Regions;
 
-namespace ProgressManager
+namespace phirSOFT.Applications.FinancePlanner.ProgressManager
 {
     public class ProgressManagerModule : IModule
     {

@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using phirSOFT.Applications.FinancePlanner;
 
-namespace ProgressManager.Services
+namespace phirSOFT.Applications.FinancePlanner.ProgressManager.Services
 {
     internal partial class ProgressManager : IProgressManager
     {

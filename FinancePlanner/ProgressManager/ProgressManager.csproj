@@ -7,7 +7,7 @@
     <ProjectGuid>{AB8B448C-DD74-4D60-A041-3E5D03A32180}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProgressManager</RootNamespace>
+    <RootNamespace>phirSOFT.Applications.FinancePlanner.ProgressManager</RootNamespace>
     <AssemblyName>ProgressManager</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
