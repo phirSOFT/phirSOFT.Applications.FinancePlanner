@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -76,6 +77,8 @@
     <Compile Include="Services\ProgressManager.cs" />
     <Compile Include="Services\ProgressManager.ManagedProgress.cs" />
     <Compile Include="Services\ProgressManager.NullCommand.cs" />
+    <Compile Include="Services\ProgressManager.ProgressReporter.cs" />
+    <Compile Include="ViewModels\ManagedProgressViewModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -88,7 +91,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
