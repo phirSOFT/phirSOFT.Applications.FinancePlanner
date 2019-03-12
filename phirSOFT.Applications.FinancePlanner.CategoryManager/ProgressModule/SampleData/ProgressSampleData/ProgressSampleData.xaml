@@ -1,0 +1,19 @@
+﻿<!--
+      *********    DIESE DATEI DARF NICHT GEÄNDERT WERDEN     *********
+      Diese Datei wurde von einem Designwerkzeug erstellt. Änderungen
+      dieser Datei können Fehler verursachen.
+-->
+<ProgressSampleData:ProgressSampleData xmlns:ProgressSampleData="clr-namespace:Expression.Blend.SampleData.ProgressSampleData">
+	<ProgressSampleData:ProgressSampleData.Collection>
+		<ProgressSampleData:Item Title="Cras" Description="Class aliquam nam" Progress="52"/>
+		<ProgressSampleData:Item Title="Maecenas" Description="Maecenas integer cras curae" Progress="79"/>
+		<ProgressSampleData:Item Title="Aenean" Description="Quisque aenean sed" Progress="95"/>
+		<ProgressSampleData:Item Title="Duis" Description="Dis donec praesent accumsan" Progress="36"/>
+		<ProgressSampleData:Item Title="Praesent" Description="Duis bibendum mauris" Progress="90"/>
+		<ProgressSampleData:Item Title="Aliquam" Description="Vivamus dictumst" Progress="71"/>
+		<ProgressSampleData:Item Title="Accumsan" Description="Nunc aliquam etiam amet" Progress="55"/>
+		<ProgressSampleData:Item Title="Class" Description="Eleifend fusce" Progress="51"/>
+		<ProgressSampleData:Item Title="Bibendum" Description="Facilisi est" Progress="72"/>
+		<ProgressSampleData:Item Title="Mauris" Description="Hac ante aliquet" Progress="33"/>
+	</ProgressSampleData:ProgressSampleData.Collection>
+</ProgressSampleData:ProgressSampleData>

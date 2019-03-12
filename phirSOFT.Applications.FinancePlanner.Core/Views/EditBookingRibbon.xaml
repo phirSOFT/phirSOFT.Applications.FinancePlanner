@@ -1,0 +1,23 @@
+﻿<ribbon:RibbonTabItem x:Class="phirSOFT.Applications.FinancePlanner.Core.Views.EditBookingRibbon"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                      xmlns:local="clr-namespace:phirSOFT.Applications.FinancePlanner.Core.Views"
+                      xmlns:ribbon="urn:fluent-ribbon"
+                      mc:Ignorable="d" 
+                      Header="Edit Booking"
+                      d:DesignHeight="300" d:DesignWidth="300">
+    <ribbon:RibbonGroupBox Header="Store">
+        <ribbon:Button>Save</ribbon:Button>
+        <ribbon:Button>Save and Continue</ribbon:Button>
+        <ribbon:Button>Save and Close</ribbon:Button>
+    </ribbon:RibbonGroupBox>
+
+    <ribbon:RibbonGroupBox Header="Booking Dates">
+        <ribbon:Button>Add</ribbon:Button>
+        <ribbon:Button>Edit</ribbon:Button>
+        <ribbon:Button>Delete</ribbon:Button>
+    </ribbon:RibbonGroupBox>
+
+</ribbon:RibbonTabItem>

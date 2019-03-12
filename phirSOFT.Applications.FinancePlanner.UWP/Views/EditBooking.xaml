@@ -1,0 +1,135 @@
+﻿<Page
+    x:Class="phirSOFT.Applications.FinancePlanner.UWP.Views.EditBooking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:phirSOFT.Applications.FinancePlanner.UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Flyout x:Key="RecurrencePicker" Placement="Full">
+            <StackPanel Width="320">
+                <DatePicker Header="Booking Date"/>
+                <CheckBox>Is Recurring</CheckBox>
+                <ComboBox Header="Periodicity" HorizontalAlignment="Stretch"/>
+
+                <!--Daily-->
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton>
+                        Every
+                    </RadioButton>
+                    <ComboBox/>
+                    <TextBlock>day(s)</TextBlock>
+                </StackPanel>
+                <RadioButton>Every Weekday</RadioButton>
+
+                <!--Weekly-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Every</TextBlock>
+                    <ComboBox></ComboBox>
+                    <TextBlock>week(s) on</TextBlock>
+
+                </StackPanel>
+                <VariableSizedWrapGrid Orientation="Horizontal">
+                    <CheckBox>Mon</CheckBox>
+                    <CheckBox>Tue</CheckBox>
+                    <CheckBox>Wed</CheckBox>
+                    <CheckBox>Thu</CheckBox>
+                    <CheckBox>Fri</CheckBox>
+                    <CheckBox>Sat</CheckBox>
+                    <CheckBox>Sun</CheckBox>
+                </VariableSizedWrapGrid>
+
+                <!--Monthly-->
+                <StackPanel Orientation="Vertical">
+                    <TextBlock>Every</TextBlock>
+                    <ComboBox/>
+                    <TextBlock>Month(s)</TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock>in</TextBlock>
+                    <ComboBox/>
+                </StackPanel>
+
+
+
+                <StackPanel Orientation="Vertical">
+                    <RadioButton>On Day</RadioButton>
+                    <ComboBox/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <RadioButton>On the</RadioButton>
+                    <ComboBox/>
+                    <ComboBox/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock>Every</TextBlock>
+                    <ComboBox/>
+                    <TextBlock>Month(s)</TextBlock>
+                </StackPanel>
+
+
+
+                <!--End-->
+                <CheckBox>Terminates</CheckBox>
+                <DatePicker Header="Last Occurence"/>
+
+            </StackPanel>
+        </Flyout>
+    </Page.Resources>
+
+
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="20,0,20,0">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="0:0:1"/>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="SingleOccurrence">
+                    <VisualState.Setters>
+                        <Setter Target="button.(UIElement.Visibility)" Value="Visible"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <StackPanel Width="{Binding Parent.ActualWidth, Mode=OneWay, RelativeSource={RelativeSource Mode=Self}}" MaxWidth="300" HorizontalAlignment="Left" >
+
+            <TextBox Header="Description" Margin="0,10,0,10"/>
+            <ComboBox HorizontalAlignment="Stretch" Margin="0,10,0,10" Header="Book as">
+                <ComboBoxItem>Income</ComboBoxItem>
+                <ComboBoxItem>Expense</ComboBoxItem>
+            </ComboBox>
+            <ComboBox HorizontalAlignment="Stretch" Margin="0,10,0,10" Header="Category"/>
+        </StackPanel>
+
+        <ListView Header="Booking Dates">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0"/>
+            <TextBlock Grid.Column="1"/>
+            <Button x:Name="button" Grid.Column="2" Flyout="{StaticResource RecurrencePicker}">
+                ...
+            </Button>
+
+        </Grid>
+    </StackPanel>
+
+</Page>

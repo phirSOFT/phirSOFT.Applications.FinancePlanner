@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="FinanceContext.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="FinanceContextTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="FinanceContext" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="FinanceContextContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CategorySet" EntityType="FinanceContext.Category" />
+          <AssociationSet Name="IncomeIncome" Association="FinanceContext.IncomeIncome">
+            <End Role="Income" EntitySet="CategorySet" />
+            <End Role="Income1" EntitySet="CategorySet" />
+          </AssociationSet>
+          <AssociationSet Name="ExpenseExpense" Association="FinanceContext.ExpenseExpense">
+            <End Role="Expense" EntitySet="CategorySet" />
+            <End Role="Expense1" EntitySet="CategorySet" />
+          </AssociationSet>
+          <EntitySet Name="BookingSet" EntityType="FinanceContext.Booking" />
+          <EntitySet Name="BookingEntrySet" EntityType="FinanceContext.BookingEntry" />
+          <AssociationSet Name="CategoryBooking" Association="FinanceContext.CategoryBooking">
+            <End Role="Category" EntitySet="CategorySet" />
+            <End Role="Booking" EntitySet="BookingSet" />
+          </AssociationSet>
+          <AssociationSet Name="BookingBookingEntry" Association="FinanceContext.BookingBookingEntry">
+            <End Role="Booking" EntitySet="BookingSet" />
+            <End Role="BookingEntry" EntitySet="BookingEntrySet" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Booking" Relationship="FinanceContext.CategoryBooking" FromRole="Category" ToRole="Booking" />
+        </EntityType>
+        <EnumType Name="ExpenseType">
+          <Member Name="Expense" />
+          <Member Name="Income" />
+        </EnumType>
+        <EntityType Name="Income" BaseType="FinanceContext.Category" >
+          <NavigationProperty Name="Parent" Relationship="FinanceContext.IncomeIncome" FromRole="Income" ToRole="Income1" />
+          <NavigationProperty Name="Children" Relationship="FinanceContext.IncomeIncome" FromRole="Income1" ToRole="Income" />
+        </EntityType>
+        <EntityType Name="Expense" BaseType="FinanceContext.Category" >
+          <NavigationProperty Name="Parent" Relationship="FinanceContext.ExpenseExpense" FromRole="Expense" ToRole="Expense1" />
+          <NavigationProperty Name="Children" Relationship="FinanceContext.ExpenseExpense" FromRole="Expense1" ToRole="Expense" />
+        </EntityType>
+        <Association Name="IncomeIncome">
+          <End Type="FinanceContext.Income" Role="Income" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="FinanceContext.Income" Role="Income1" Multiplicity="*" />
+        </Association>
+        <Association Name="ExpenseExpense">
+          <End Type="FinanceContext.Expense" Role="Expense" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="FinanceContext.Expense" Role="Expense1" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Category" Relationship="FinanceContext.CategoryBooking" FromRole="Booking" ToRole="Category" />
+          <NavigationProperty Name="BookingEntry" Relationship="FinanceContext.BookingBookingEntry" FromRole="Booking" ToRole="BookingEntry" />
+          <Property Name="Title" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BookingEntry">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Booking" Relationship="FinanceContext.BookingBookingEntry" FromRole="BookingEntry" ToRole="Booking" />
+          <Property Name="Amount" Type="String" Nullable="false" />
+          <Property Name="Guessed" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="CategoryBooking">
+          <End Type="FinanceContext.Category" Role="Category" Multiplicity="1" />
+          <End Type="FinanceContext.Booking" Role="Booking" Multiplicity="*" />
+        </Association>
+        <Association Name="BookingBookingEntry">
+          <End Type="FinanceContext.Booking" Role="Booking" Multiplicity="1" />
+          <End Type="FinanceContext.BookingEntry" Role="BookingEntry" Multiplicity="*" />
+        </Association>
+        <EntityType Name="SingleBooking" BaseType="FinanceContext.BookingEntry" >
+          <Property Name="PostingDate" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RecurringDate" BaseType="FinanceContext.BookingEntry" >
+          <Property Name="Renew" Type="String" Nullable="false" />
+          <Property Name="FirstPosting" Type="String" Nullable="false" />
+          <Property Name="LastPosting" Type="String" Nullable="false" />
+          <Property Name="RecurringPatter" Type="String" Nullable="false" />
+          <Property Name="ExceptionPattern" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="FinanceContext" />
+        <Alias Key="Target" Value="FinanceContext.Store" />
+        <EntityContainerMapping CdmEntityContainer="FinanceContextContainer" StorageEntityContainer="FinanceContextTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

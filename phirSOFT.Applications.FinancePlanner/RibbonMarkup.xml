@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://schemas.microsoft.com/windows/2009/Ribbon">
+  <Application.Commands>
+    <!--Tabs-->
+    <Command Id="1000" Name="Main" LabelTitle="{Resource:Main}" Keytip="{Resource:KeytipMain}"/>
+    <Command Id="2000" Name="Categories" LabelTitle="{Resource:Categories}"/>
+    <Command Id="2500" Name="CategoriesTools" LabelTitle="{Resource:CategoriesTools}"/>
+    <Command Id="3000" Name="Windows" LabelTitle="{Resource:Windows}"/>
+
+    <!--Main Groups-->
+    <Command Id="1100" Name="Connection" LabelTitle="{Resource:Connection}" Keytip="{Resource:KeytipConnection"/>
+
+    <!--Connection-->
+    <Command Id="1101" Name="Connect" LabelTitle="{Resource:Connect}"/>
+    <Command Id="1102" Name="Disconnect" LabelTitle="{Resource:Disconect}"/>
+    <Command Id="1103" Name="ConnectTo" LabelTitle="{Resource:ConnectTo}"/>
+    <Command Id="1104" Name="Reconnect" LabelTitle="{Resource:Reconect}"/>
+
+    <!--Categories Groups-->
+    <Command Id="2100" Name="EditCategory" LabelTitle="{Resource:Edit}"/>
+    <Command Id="2200" Name="ChangeCategory" LabelTitle="{Resource:Changes}"/>
+
+    <!--Categories Commands-->
+    <Command Id="2101" Name="Delete" LabelTitle="{Resource:Delete}"
+             LabelDescription="{Resource:DeleteDescription}"
+             TooltipTitle ="{Resource:DeleteTitle}"
+             TooltipDescription ="{Resource:DeleteTooltipDescription}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/DeleteCategory32.png"/>
+        <Image MinDPI="144" Source="res/DeleteCategory48.png"/>
+        <Image MinDPI="192" Source="res/DeleteCategory64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/DeleteCategory16.png"/>
+        <Image MinDPI="192" Source="res/DeleteCategory32.png"/>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Id="2102" Name="Join" LabelTitle="{Resource:Join}"
+             LabelDescription="{Resource:JoinDescription}"
+             TooltipTitle ="{Resource:JoinTitle}"
+             TooltipDescription ="{Resource:JoinTooltipDescription}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/JoinCategory32.png"/>
+        <Image MinDPI="144" Source="res/JoinCategory48.png"/>
+        <Image MinDPI="192" Source="res/JoinCategory64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/JoinCategory16.png"/>
+
+        <Image MinDPI="192" Source="res/JoinCategory32.png"/>
+      </Command.SmallImages>
+
+    </Command>
+
+    <Command Id="2103" Name="Add" LabelTitle="{Resource:Add}"
+             LabelDescription="{Resource:AddDescription}"
+             TooltipTitle ="{Resource:AddTitle}"
+             TooltipDescription ="{Resource:AddTooltipDescription}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/AddCategory32.png"/>
+        <Image MinDPI="144" Source="res/AddCategory48.png"/>
+        <Image MinDPI="192" Source="res/AddCategory64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/AddCategory16.png"/>
+        <Image MinDPI="192" Source="res/AddCategory32.png"/>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Id="2104" Name="Edit" LabelTitle="{Resource:Edit}"
+             LabelDescription="{Resource:EditDescription}"
+             TooltipTitle ="{Resource:EditTitle}"
+             TooltipDescription ="{Resource:EditTooltipDescription}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/EditCategory32.png"/>
+        <Image MinDPI="144" Source="res/EditCategory48.png"/>
+        <Image MinDPI="192" Source="res/EditCategory64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/EditCategory16.png"/>
+        <Image MinDPI="192" Source="res/EditCategory32.png"/>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Id="2105" Name="Move" LabelTitle="{Resource:Move}"
+             LabelDescription="{Resource:MoveDescription}"
+             TooltipTitle ="{Resource:MoveTitle}"
+             TooltipDescription ="{Resource:MoveTooltipDescription}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/MoveCategory32.png"/>
+        <Image MinDPI="144" Source="res/MoveCategory48.png"/>
+        <Image MinDPI="192" Source="res/MoveCategory64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/MoveCategory16.png"/>
+        <Image MinDPI="192" Source="res/MoveCategory32.png"/>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Id="2201" Name="Accept" LabelTitle="{Resource:Accept}"
+             LabelDescription="{Resource:AcceptDescription}"
+             TooltipTitle ="{Resource:AcceptTitle}"
+             TooltipDescription ="{Resource:AcceptTooltipDescription}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/AcceptChanges32.png"/>
+        <Image MinDPI="144" Source="res/AcceptChanges48.png"/>
+        <Image MinDPI="192" Source="res/AcceptChanges64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/AcceptChanges16.png"/>
+        <Image MinDPI="192" Source="res/AcceptChanges32.png"/>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Id="2202" Name="Discard" LabelTitle="{Resource:Discard}"
+             LabelDescription="{Resource:DiscardDescription}"
+             TooltipTitle ="{Resource:DiscardTitle}"
+             TooltipDescription ="{Resource:DiscardTooltipDescription}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/DiscardChanges32.png"/>
+        <Image MinDPI="144" Source="res/DiscardChanges48.png"/>
+        <Image MinDPI="192" Source="res/DiscardChanges64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/DiscardChanges16.png"/>
+        <Image MinDPI="192" Source="res/DiscardChanges32.png"/>
+      </Command.SmallImages>
+    </Command>
+
+    <!--Windows Groups-->
+    <Command Id="3100" Name="WindowsGroup"/>
+
+    <!--Windows Commands-->
+    <Command Id="3001" Name="CategoryEditor" LabelTitle="{Resource:CategoryEditor}">
+      <Command.LargeImages>
+        <Image MinDPI="96" Source="res/Category32.png"/>
+        <Image MinDPI="144" Source="res/Category48.png"/>
+        <Image MinDPI="192" Source="res/Category64.png"/>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image MinDPI="96" Source="res/Category16.png"/>
+        <Image MinDPI="192" Source="res/Category32.png"/>
+      </Command.SmallImages>
+    </Command>
+
+    <Command Id="3002" Name="Log" LabelTitle="{Resource:Log}"/>
+    <Command Id="3003" Name="TransactionOverview" LabelTitle="{Resource:TransactionOverview}"/>
+    <Command Id="3004" Name="Reminder" LabelTitle="{Resource:Reminder}"/>
+    <Command Id="3005" Name="Search" LabelTitle="{Resource:Search}"/>
+    <Command Id="3006" Name="TransactionEditor" LabelTitle="{Resource:TransactionEditor}"/>
+    <Command Id="3007" Name="AnnualReport" LabelTitle="{Resource:AnualReport}"/>
+
+    <!--Application Menu-->
+    <Command Id="10000" Name="ApplicationMenu"/>
+    <Command Id="20000" Name="QuickAccessToolbar"/>
+
+    <Command Id="30000" Name="Help"/>
+
+    <!--Toolbars-->
+    <Command Id ="40001" Name="ChangesToolbar"/>
+
+  
+  <!--ContextMenus-->
+    <Command Id="50001" Name ="EditCategoriesContext"/>
+  </Application.Commands>
+  <Application.Views>
+
+    <Ribbon>
+      <Ribbon.QuickAccessToolbar>
+        <QuickAccessToolbar CommandName="QuickAccessToolbar">
+
+        </QuickAccessToolbar>
+      </Ribbon.QuickAccessToolbar>
+
+
+
+      <Ribbon.HelpButton>
+        <HelpButton CommandName ="Help"/>
+      </Ribbon.HelpButton>
+
+      <Ribbon.ApplicationMenu>
+        <ApplicationMenu CommandName="ApplicationMenu">
+          <MenuGroup>
+            <Button CommandName="Connect"/>
+            <DropDownButton CommandName="ConnectTo"/>
+          </MenuGroup>
+        </ApplicationMenu>
+      </Ribbon.ApplicationMenu>
+
+
+      <Ribbon.Tabs>
+
+        <Tab CommandName="Main">
+          <Group CommandName ="Connection" SizeDefinition="FourButtons">
+            <Button CommandName="Connect"/>
+            <Button CommandName="Disconnect"/>
+            <DropDownButton CommandName="ConnectTo"/>
+            <Button CommandName="Reconnect"/>
+          </Group>
+        </Tab>
+
+        <Tab CommandName ="Windows">
+          <Tab.ScalingPolicy>
+            <ScalingPolicy>
+              <ScalingPolicy.IdealSizes>
+                <Scale Group ="WindowsGroup" Size ="Large"/>
+              </ScalingPolicy.IdealSizes>
+              <Scale Group ="WindowsGroup" Size ="Medium"/>
+              <Scale Group ="WindowsGroup" Size ="Small"/>
+              <Scale Group ="WindowsGroup" Size ="Popup"/>
+            </ScalingPolicy>
+          </Tab.ScalingPolicy>
+          <Group SizeDefinition="SevenButtons" CommandName ="WindowsGroup">
+            <Button CommandName ="CategoryEditor"/>
+            <Button CommandName="Log"/>
+            <Button CommandName="TransactionOverview"/>
+            <Button CommandName="Reminder"/>
+            <Button CommandName="Search"/>
+            <Button CommandName="TransactionEditor"/>
+            <Button CommandName="AnnualReport"/>
+          </Group>
+        </Tab>
+
+
+      </Ribbon.Tabs>
+      <Ribbon.ContextualTabs>
+        <TabGroup CommandName ="CategoriesTools">
+          <Tab CommandName ="Categories">
+            <Tab.ScalingPolicy>
+              <ScalingPolicy>
+                <ScalingPolicy.IdealSizes>
+                  <Scale Group ="EditCategory" Size ="Large"/>
+                  <Scale Group="ChangeCategory" Size="Large"/>
+                </ScalingPolicy.IdealSizes>
+                <Scale Group ="EditCategory" Size ="Medium"/>
+                <Scale Group ="EditCategory" Size ="Small"/>
+                <Scale Group="ChangeCategory" Size="Medium"/>
+
+              </ScalingPolicy>
+            </Tab.ScalingPolicy>
+            <Group CommandName ="EditCategory" SizeDefinition="FiveButtons">
+              <Button CommandName="Add"/>
+              <Button CommandName="Delete"/>
+              <Button CommandName="Edit"/>
+              <Button CommandName="Move"/>
+              <Button CommandName="Join" />
+
+            </Group>
+            <Group SizeDefinition ="TwoButtons" CommandName="ChangeCategory">
+              <Button CommandName ="Accept"/>
+              <Button CommandName="Discard"/>
+            </Group>
+          </Tab>
+        </TabGroup>
+      </Ribbon.ContextualTabs>
+
+    </Ribbon>
+    <ContextPopup>
+      <ContextPopup.MiniToolbars>
+        <MiniToolbar Name ="ChangesMiniToolbar">
+          <MenuGroup>
+            <Button CommandName ="Accept"/>
+            <Button CommandName="Discard"/>
+          </MenuGroup>
+        </MiniToolbar>
+      </ContextPopup.MiniToolbars>
+      <ContextPopup.ContextMenus>
+        <ContextMenu  Name="EditCategoriesContextMenu">
+          <MenuGroup>
+            <Button CommandName ="Delete"/>
+            <Button CommandName ="Edit"/>
+            <Button CommandName="Move"/>
+            <Button CommandName="Join"/>
+          </MenuGroup>
+        </ContextMenu>
+      </ContextPopup.ContextMenus>
+
+      <ContextPopup.ContextMaps>
+        <ContextMap CommandName="ChangesToolbar" MiniToolbar ="ChangesMiniToolbar"/>
+        <ContextMap CommandName="EditCategoriesContext" ContextMenu ="EditCategoriesContextMenu"/>
+      </ContextPopup.ContextMaps>
+    </ContextPopup>
+  </Application.Views>
+</Application>

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ProgressModule"
+                    xmlns:shared="clr-namespace:Shared;assembly=Shared">
+   
+    <shared:DictionaryConverter x:Key="BoolToVisivleConverter" Default="Collapsed">
+        <Visibility x:Key="True">Visible</Visibility>
+        <Visibility x:Key="False">Collapsed</Visibility>
+    </shared:DictionaryConverter>
+    
+    
+</ResourceDictionary>

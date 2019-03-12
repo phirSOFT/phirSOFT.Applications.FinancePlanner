@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e1a5444d572e4f5e95807b07bba652b5" Name="Diagram1" >
+        <EntityTypeShape EntityType="FinanceContext.Category" Width="1.5" PointX="10" PointY="4.125" />
+        <EntityTypeShape EntityType="FinanceContext.Income" Width="1.5" PointX="9" PointY="7.25" />
+        <InheritanceConnector EntityType="FinanceContext.Income" />
+        <EntityTypeShape EntityType="FinanceContext.Expense" Width="1.5" PointX="10.875" PointY="7.25" />
+        <InheritanceConnector EntityType="FinanceContext.Expense" />
+        <AssociationConnector Association="FinanceContext.IncomeIncome" />
+        <AssociationConnector Association="FinanceContext.ExpenseExpense" />
+        <EntityTypeShape EntityType="FinanceContext.Booking" Width="1.5" PointX="6.875" PointY="4.125" />
+        <EntityTypeShape EntityType="FinanceContext.BookingEntry" Width="1.5" PointX="3.625" PointY="4.125" />
+        <AssociationConnector Association="FinanceContext.CategoryBooking" />
+        <AssociationConnector Association="FinanceContext.BookingBookingEntry" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FinanceContext.SingleBooking" Width="1.5" PointX="2.5" PointY="7.25" />
+        <InheritanceConnector EntityType="FinanceContext.SingleBooking" />
+        <EntityTypeShape EntityType="FinanceContext.RecurringDate" Width="1.5" PointX="4.625" PointY="7.25" />
+        <InheritanceConnector EntityType="FinanceContext.RecurringDate" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
